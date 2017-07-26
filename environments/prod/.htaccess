@@ -1,0 +1,43 @@
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    Options +FollowSymlinks
+    RewriteEngine On
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/antick/skyii/api/v1
+    RewriteRule ^.*$ api/web/v1/index.php [L]
+
+    RewriteCond %{REQUEST_URI} ^/antick/skyii/(admin)
+    RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+    RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
+    RewriteRule ^admin/js/(.*)$ backend/web/js/$1 [L]
+    RewriteRule ^admin/images/(.*)$ backend/web/images/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/antick/skyii/backend/web/(assets|css|images)/
+    RewriteCond %{REQUEST_URI} ^/antick/skyii/(admin)
+    RewriteRule ^.*$ backend/web/index.php [L]
+
+    RewriteCond %{REQUEST_URI} ^/antick/skyii/(assets|css|images|media)
+    RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
+    RewriteRule ^js/(.*)$ frontend/web/js/$1 [L]
+    RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+    RewriteRule ^images/(.*)$ frontend/web/images/$1 [L]
+    RewriteRule ^media/(.*)$ media/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/antick/skyii/(frontend|backend)/web/(assets|css|images)/
+    RewriteCond %{REQUEST_URI} !^/antick/skyii/(media)/
+    RewriteCond %{REQUEST_URI} !index.php
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ frontend/web/index.php
+</IfModule>
+
+# Deny accessing below extensions
+<Files ~ "(.json|.lock|.git)">
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny accessing dot files
+RewriteRule (^\.|/\.) - [F]

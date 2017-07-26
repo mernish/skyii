@@ -1,0 +1,74 @@
+{
+    "name": "antick/skyii",
+    "description": "Starter Kit for Yii2",
+    "keywords": ["skyii", "yii2", "yii2 admin", "advanced", "admin", "antick", "yii2 crud"],
+    "homepage": "http://github.com/antick",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/antick/skyii/issues?state=open",
+        "forum": "https://github.com/antick/skyii/issues",
+        "wiki": "https://github.com/antick/skyii/wiki",
+        "source": "https://github.com/antick/skyii"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "~2.0.12",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yiisoft/yii2-jui": "~2.0.0",
+        "yiisoft/yii2-httpclient": "~2.0.0",
+        "yiisoft/yii2-imagine": "~2.0.0",
+        "kartik-v/yii2-tree-manager": "dev-master",
+        "kartik-v/yii2-helpers": "dev-master",
+        "kartik-v/yii2-widget-alert": "*",
+        "kartik-v/yii2-password": "@dev",
+        "kartik-v/yii2-widgets": "*",
+        "kartik-v/yii2-date-range": "dev-master",
+        "kartik-v/yii2-sortable-input": "dev-master",
+        "kartik-v/yii2-editable": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "kartik-v/yii2-widget-switchinput": "*",
+        "kartik-v/yii2-widget-depdrop": "@dev",
+        "kartik-v/yii2-datecontrol": "@dev",
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-widget-sidenav": "*",
+        "almasaeed2010/adminlte": "~2.3",
+        "mootensai/yii2-enhanced-gii": "dev-master",
+        "faryshta/yii2-disable-submit-buttons": "dev-master",
+        "yii2mod/collection": "*",
+        "yii2mod/yii2-helpers": "*",
+        "yii2mod/yii2-scheduling": "*",
+        "aryelds/yii2-sweet-alert": "@dev",
+        "kdn/yii2-domain-validator": "*",
+        "codeonyii/yii2-at-least-validator": "^1.1",
+        "nepstor/yii2-datetime-compare-validator": "^2.0",
+        "chouaibi/yii2-blacklist-validator" : "dev-master",
+        "tpmanc/yii2-imagick": "*",
+        "nex/yii2-chosen" : "*",
+        "moonlandsoft/yii2-phpexcel": "*",
+        "johnitvn/yii2-ajaxcrud": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "php init --env=Development --overwrite=n"
+    }
+}
