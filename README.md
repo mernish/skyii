@@ -72,7 +72,8 @@ After you have downloaded or ran git clone, you have to follow below steps to in
    php yii skyii/install
    ```
 
-   It will also run `migrate` command with your confirmation as well as setup proper folder paths in htaccess.
+   It will also run `migrate` command with your confirmation as well as setup proper folder paths in htaccess. But just in case 
+   if it does not run the migrations on its own then you will have to run `php yii migrate` in console.
 
 4. Navigate to the admin panel and wait for few seconds while all the caches are being generated.
 

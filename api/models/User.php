@@ -8,7 +8,7 @@ use yii\filters\RateLimitInterface;
  * Class User
  * @package api\models
  */
-class User extends \common\models\User implements RateLimitInterface
+class User extends \modules\user\models\User implements RateLimitInterface
 {
     public $rateLimit = 2;
     public $durationInSeconds = 1;

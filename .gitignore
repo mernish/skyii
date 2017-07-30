@@ -1,14 +1,15 @@
 .idea
 .vscode
 .c9
-nbproject
 .buildpath
 .project
 .settings
+nbproject
 Thumbs.db
 composer.phar
 .DS_Store
 phpunit.phar
 /phpunit.xml
-/.vagrant
 /vendor
+/.vagrant
+/.htaccess
