@@ -33,7 +33,7 @@ use modules\user\models\User;
  * @property <?= $relation[1] . ($relation[2] ? '[]' : '') . ' $' . lcfirst($name) . "\n" ?>
 <?php endforeach; ?>
  <?php endif; ?>
- * @property string $state Status in human readable form
+* @property string $state Status in human readable form
  */
 class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . "\n" ?>
 {
@@ -125,16 +125,6 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
         return true;
     }
 
-    public function setCreatedBy($created_by)
-    {
-        $this->created_by = empty($created_by) ? Yii::$app->user->id : $created_by;
-    }
-
-    public function setUpdatedBy($updated_by)
-    {
-        $this->updated_by = empty($updated_by) ? Yii::$app->user->id : $updated_by;
-    }
-
     /**
      * Get status in human readable form
      *
@@ -143,16 +133,6 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     public function getState()
     {
         return !empty($this->status) && $this->status == 1 ? 'Active' : 'Inactive';
-    }
-
-    public function getCreatedBy()
-    {
-        return $this->hasOne(User::className(), ['id' => 'created_by']);
-    }
-
-    public function getUpdatedBy()
-    {
-        return $this->hasOne(User::className(), ['id' => 'updated_by']);
     }
 <?php foreach ($relations as $name => $relation): ?>
 

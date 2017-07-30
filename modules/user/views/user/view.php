@@ -75,7 +75,6 @@ $controllerId = $this->context->uniqueId . '/';
                         'username',
                         'phone',
                         'dob',
-                        'anniversary_date',
                         'created_at:date',
                         'status',
                     ],

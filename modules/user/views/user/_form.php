@@ -33,20 +33,6 @@ use common\helpers\Html;
                 ]);
                 ?>
             </div>
-            <div class="form-group field-user-anniversary_date">
-                <label class="control-label" for="user-anniversary_date">Anniversary Date</label>
-                <?php
-                echo DatePicker::widget([
-                    'name' => 'User[anniversary_date]',
-                    'value' => $model->anniversary_date ? Yii::$app->formatter->asDate($model->anniversary_date, 'dd-MMM-yyyy') : null,
-                    'type' => DatePicker::TYPE_INPUT,
-                    'pluginOptions' => [
-                        'autoclose' => true,
-                        'format' => 'dd-M-yyyy'
-                    ]
-                ]);
-                ?>
-            </div>
         </div>
     </div>
 </div>

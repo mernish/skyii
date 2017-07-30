@@ -20,7 +20,6 @@ use modules\user\components\Configs;
  * @property string $auth_key
  * @property string $phone
  * @property string $dob
- * @property string $anniversary_date
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
@@ -73,10 +72,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['password', 'string', 'min' => 6],
 
             ['phone', 'filter', 'filter' => 'trim'],
-
             ['dob', 'filter', 'filter' => 'trim'],
-
-            ['anniversary_date', 'filter', 'filter' => 'trim'],
         ];
     }
 
@@ -90,7 +86,6 @@ class User extends ActiveRecord implements IdentityInterface
             $this->setPassword($this->password);
             $this->generateAuthKey();
             $this->setDob($this->dob);
-            $this->setAnniversaryDate($this->anniversary_date);
         }
 
         return true;
@@ -112,14 +107,6 @@ class User extends ActiveRecord implements IdentityInterface
     public function setDob($dob)
     {
         $this->dob = Yii::$app->formatter->asDate($dob, 'yyyy-MM-dd');
-    }
-
-    /**
-     * @param $anniversary_date
-     */
-    public function setAnniversaryDate($anniversary_date)
-    {
-        $this->anniversary_date = Yii::$app->formatter->asDate($anniversary_date, 'yyyy-MM-dd');
     }
 
     /**

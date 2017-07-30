@@ -34,10 +34,10 @@ use common\helpers\Html;
     <div class="row">
         <?= "<?php " ?>$form = ActiveForm::begin(); ?>
 <?php if ($visibleColumns <= 3) : ?>
-            <div class="col-sm-4 col-sm-offset-4">
+            <div class="col-md-4 col-md-offset-4">
 <?php else : ?>
-            <div class="col-sm-12">
-                <div class="col-sm-6">
+            <div class="col-md-12">
+                <div class="col-md-6">
 <?php endif; ?>
 <?php
 $i = 0;
@@ -45,7 +45,7 @@ $half = ceil($visibleColumns / 2);
 foreach ($generator->getColumnNames() as $attribute) {
     if($i == $half) {
 echo '                </div>'."\n";
-echo '                <div class="col-sm-6">'."\n";
+echo '                <div class="col-md-6">'."\n";
     }
     if (in_array($attribute, $safeAttributes)) {
         if ($attribute == 'id' || $attribute == 'status' || $attribute == 'created_by' || $attribute == 'updated_by' || $attribute == 'created_at' || $attribute == 'updated_at') {

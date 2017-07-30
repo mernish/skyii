@@ -48,7 +48,7 @@ list($path, $link) = $this->getAssetManager()->publish('@vendor/almasaeed2010/ad
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>TP</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Travel</b>Price</span>
+            <span class="logo-lg"><b>Skyii</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->

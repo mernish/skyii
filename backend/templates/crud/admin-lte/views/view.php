@@ -50,7 +50,7 @@ $this->params['page_type'] = 'view';
     
     <div class="box-body">
         <div class="row">
-            <div class="col-sm-11">
+            <div class="col-md-11">
 <?= "                <?= " ?>DetailView::widget([
                     'model' => $model,
                     'attributes' => [
