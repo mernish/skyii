@@ -166,7 +166,7 @@ class SkyiiController extends Controller
         }
 
         file_put_contents($htaccess, $htaccess_file);
-        echo "\nHtaccess paths are updated\n";
+        echo "\nUpdated folder path in Htaccess.\n";
     }
 
     /**
