@@ -28,10 +28,6 @@ return [
                     'js' => [],
                     'css' => [],
                 ],
-                'yii\jui\JuiAsset' => [
-                    'js' => [],
-                    'css' => [],
-                ],
                 'yii\bootstrap\BootstrapAsset' => [
                     'js' => [],
                     'css' => [],
