@@ -18,7 +18,9 @@ class Html extends \yii\helpers\Html
 
     public static function backButton($options = [])
     {
-        return Html::a('Back', Yii::$app->request->referrer, ['class' => 'btn btn-default']);
+        if(Yii::$app->request->referrer){
+            return Html::a('Back', Yii::$app->request->referrer, ['class' => 'btn btn-default']);
+        }
     }
 
     public static function ajaxSubmit($view, $options = [])
